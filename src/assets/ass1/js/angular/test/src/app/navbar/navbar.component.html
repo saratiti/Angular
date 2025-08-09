@@ -1,0 +1,28 @@
+<style>
+a{
+
+
+    color:blue;
+    display: inline-flex;
+    background-color: chartreuse;
+    box-shadow: 10px 5px 10x gold ;
+    font-size: 25px;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+</style>
+
+
+
+<a href="http://localhost:4200/home">Home</a>
+<a href="http://localhost:4200/home/about">about</a>
+<a href="http://localhost:4200/home/contact">Contact</a>
+
+
+<a [routerLink]="'/home'" >Home</a>
+<a [routerLink]="'/home/about'" >about</a>
+<a [routerLink]="'/home/contact'" >Contact</a>
+
+<a [routerLink]="'/user/userdashboard'">Userdashboard</a>

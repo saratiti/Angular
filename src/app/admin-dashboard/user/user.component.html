@@ -1,0 +1,96 @@
+
+<app-admin-navbar></app-admin-navbar>
+  <!--=================================
+  Dashboard Nav -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sticky-top secondary-menu-sticky-top">
+            <div class="secondary-menu">
+              <ul>
+                <!-- <li><a href="dashboard-employer.html">Dashboard</a></li> -->
+                <li><a  (click)="profile()">My Profile</a></li> 
+                
+                <li><a  (click)="company()">Company Details</a></li>
+                <li><a  (click)="job()">Job Vacancy</a></li>
+                <li><a   (click)="applyjob()">Job Applied</a></li>
+                <li><a class="active" (click)="User()">User Details</a></li>
+                <li><a (click)="Report()">Reports</a></li>
+                <li><a  (click)="message()">Message</a></li>
+                <li><a  (click)="Manage()">Manage Site</a></li>
+                <li><a (click)="login()">Log Out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================
+  Dashboard Nav -->
+  
+
+<!--=================================
+Manage Candidates -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="user-dashboard-info-box table-responsive pb-4 mb-0">
+          <table class="table manage-candidates-top mb-0">
+            <thead>
+              <tr>
+                <th>User Name  <span style="color: chocolate; font-size: larger;">{{count}}</span></th>
+                <th>Action</th>
+          
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of userservice.dataedu " class="candidates-list">
+                <td class="title">
+                  <div class="thumb">
+                      <!-- user image -->
+                    <img class="img-fluid" src="../../../assets/images/{{user.imagename}}" alt="">
+                  </div>
+                  <div class="candidate-list-details">
+                    <div class="candidate-list-info">
+                      <div class="candidate-list-title">
+                          <!-- user Name -->
+
+                        
+  
+                        <h5 class="mb-0"><a href="#">{{user.fname}} {{user.lname}}</a></h5>
+                      </div>
+                      <div class="candidate-list-option">
+                        <ul class="list-unstyled">
+                          <!-- التخصص -->
+                          <li><i class="fas fa-filter pe-1"></i>{{user.major}}</li>
+                          <li><i class="fas fa-university pe-1"></i>{{user.university}}</li>
+                          
+                          <!--address-->
+                          <li><i class="fas fa-map-marker-alt pe-1"></i>{{user.address}}</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="candidate-list-favourite-time text-center">
+                  <a class="order-2 mb-3 d-block" >
+                       <i  class="far fa-trash-alt" (click)="delete(user.client_ID)"></i></a> 
+                 
+                  
+                </td>
+              
+              </tr>
+            </tbody>
+          </table>
+     
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--=================================
+Manage Candidates -->

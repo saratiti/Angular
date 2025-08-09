@@ -1,0 +1,189 @@
+
+<app-user-navbar></app-user-navbar>
+  
+  <!--=================================
+  Dashboard Nav -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sticky-top secondary-menu-sticky-top">
+            <div class="secondary-menu">
+              <ul class="list-unstyled mb-0">
+                <li><a  (click)="profile()">My Profile</a></li> 
+                <!-- <li><a (click)="password()">Change Password</a></li> -->
+                <li><a class="active"(click)="education()">Education</a></li>
+                <li><a (click)="message()">Message</a></li>
+
+                <li><a  (click)="job()">Job Vacancy</a></li>
+                <li><a  (click)="applyjob()">Job Applied</a></li>
+                <li><a  (click)="testimonial()">Testimonial</a></li>
+                <li><a (click)="logout()">Log Out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================
+  Dashboard Nav -->
+<!--=================================
+    My Resume -->
+    <section>
+        <div class="container">
+          <div class="row">
+           
+           
+            <div class="col-12">
+             
+              <div class="user-dashboard-info-box">
+                <div class="dashboard-resume-title d-flex align-items-center">
+                  <div class="section-title-02 mb-sm-0">
+                    <h4 class="mb-0">Education</h4>
+                  </div>
+                  <a class="btn btn-md ms-sm-auto btn-primary" data-bs-toggle="collapse" href="#dateposted" role="button" aria-expanded="false" aria-controls="dateposted">Add Education</a>
+                </div>
+                 <div class="collapse show" id="dateposted">
+                  <div class="bg-light p-3 mt-4">
+               
+                    <form [formGroup]="addeducation" class="row collapse show" id="dateposted-01">
+                      <div class="form-group mb-3 col-md-6">
+                        <label class="form-label">Major</label>
+                        <input formControlName="major" type="text" class="form-control" >
+                      </div>
+                     
+                      <div class="form-group mb-3 col-md-6">
+                        <label class="form-label">University</label>
+                        <input  formControlName="university" type="text" class="form-control" >
+                      </div>
+                      <div class="form-group mb-3 col-md-6">
+                        <label class="form-label">Degree</label>
+                        <input formControlName="degree" type="text" class="form-control">
+                      </div>
+                      <div class="form-group mb-3 col-md-6">
+                        <label class="form-label">Gpa</label>
+                        <input formControlName="gpa" type="number" class="form-control" >
+                      </div>
+                      <div class="user-dashboard-info-box">
+                        <div class="dashboard-resume-title d-flex align-items-center">
+                          <div class="section-title-02 mb-sm-0">
+                            <h4 class="mb-0">Upload-files</h4>
+                          </div>
+                          <!-- <a class="btn btn-md ms-sm-auto btn-primary" data-bs-toggle="collapse" href="#dateposted" role="button" aria-expanded="false" aria-controls="dateposted"href="#">Add files</a> -->
+                        </div>
+                        <div class="collapse show" id="dateposted-11">
+                          <div class="bg-light p-3 mt-4">
+                          
+                              <div class="form-group mb-3 col-md-6">
+                                <label class="form-label">Upload-CV</label>
+                                <input #file type="file"   class="form-control" value="cv"(change)="uploadFile($event)" >
+                              </div>
+        
+        
+                              <!-- <div class="upload-file">
+                                <input  class="form-control" type="file" #file placeholder=" Upload-CV"
+                                formControlName="uploadcv" (change)="uploadFile($event)" 
+                                style="display:none;">
+                                <label  for="formFile" class="form-label"  (click)="file.click()">Upload-CV</label>
+                                </div> -->
+                              <!-- <div class="form-group mb-3 col-md-6">
+                                <label class="form-label">Upload Certificate </label>
+                                <input type="file" class="form-control" value="Certificate">
+                              </div> -->
+                           
+                        
+                         
+                          </div>
+                        </div>
+                      </div>
+                   
+                      <div class="form-group col-md-12 mb-0">
+                        <a class="btn btn-md btn-primary" (click)="addedu()">Add</a>
+                      </div>
+                    </form>
+                  </div>
+                </div> 
+                <div class="jobber-candidate-timeline mt-4">
+                  <div class="jobber-timeline-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                  </div>
+                  <div class="jobber-timeline-item">
+                    <div class="jobber-timeline-cricle">
+                      <i class="far fa-circle"></i>
+                    </div>
+                    <div class="jobber-timeline-info">
+                      <div class="dashboard-timeline-info">
+                        <div class="dashboard-timeline-edit">
+                          <ul class="list-unstyled d-flex">
+                            <li><a class="text-end" data-bs-toggle="collapse" href="#dateposted-02" role="button" aria-expanded="false" aria-controls="dateposted"> <i class="fas fa-pencil-alt text-info me-2"></i> </a></li>
+                            <li><a (click)="delete()"><i class="far fa-trash-alt text-danger"></i></a></li>
+                          </ul>
+                        </div>
+                        <span class="jobber-timeline-time">2018 - Pres</span>
+                        <h6 class="mb-2">{{Major}}</h6>
+                        <span>-University: {{University}}</span><br>
+                        <span>-Degree: {{Degree}}</span><br>
+                        <span>-Gpa: {{Gpa}}</span><br>
+                      </div>
+                      <div class="collapse show" id="dateposted-02">
+                        <div class="bg-light p-3">
+                          <form [formGroup]="updateeducation" class="row collapse show" id="dateposted-01">
+                            <div class="form-group mb-3 col-md-6">
+                              <label class="form-label">Major</label>
+                              <input formControlName="major" type="text" class="form-control" >
+                            </div>
+                           
+                            <div class="form-group mb-3 col-md-6">
+                              <label class="form-label">University</label>
+                              <input  formControlName="university" type="text" class="form-control" >
+                            </div>
+                            <div class="form-group mb-3 col-md-6">
+                              <label class="form-label">Degree</label>
+                              <input formControlName="degree" type="text" class="form-control">
+                            </div>
+                            <div class="form-group mb-3 col-md-6">
+                              <label class="form-label">Gpa</label>
+                              <input formControlName="gpa" type="number" class="form-control" >
+                            </div>
+                            <div class="user-dashboard-info-box">
+                              <div class="dashboard-resume-title d-flex align-items-center">
+                                <div class="section-title-02 mb-sm-0">
+                                  <h4 class="mb-0">Upload-files</h4>
+                                </div>
+                                <!-- <a class="btn btn-md ms-sm-auto btn-primary" data-bs-toggle="collapse" href="#dateposted" role="button" aria-expanded="false" aria-controls="dateposted"href="#">Add files</a> -->
+                              </div>
+                              <div class="collapse show" id="dateposted-11">
+                                <div class="bg-light p-3 mt-4">
+                                
+                                    <div class="form-group mb-3 col-md-6">
+                                      <label class="form-label">Upload-CV</label>
+                                      <input #file type="file"   class="form-control" value="cv" (change)="uploadFile($event)" >
+                                    </div>
+              
+              
+                               
+                                </div>
+                              </div>
+                            </div>
+                          
+                            <div class="form-group col-md-12 mb-0">
+                              <a class="btn btn-md btn-primary" (click)="updateedu()">Update</a>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
+            
+             
+            
+            
+            </div>
+          </div>
+        </div>
+      </section>
+        

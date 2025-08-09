@@ -1,0 +1,69 @@
+
+<!--=================================
+Header -->
+<header class="header bg-dark">
+    <nav class="navbar navbar-static-top navbar-expand-lg header-sticky">
+      <div class="container-fluid">
+        <button id="nav-icon4" type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <a class="navbar-brand" (click)="Home()">
+        <!-- NameHome -->
+            <h3 style="color: #e07900; font-family: Lucida Handwriting;">{{HomeName}}</h3>
+          <!-- <img class="img-fluid" src="images/logo.svg" alt="logo"> -->
+        </a>
+        <div class="navbar-collapse collapse justify-content-start">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown active">
+              <a class="nav-link" (click)="Home()" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Home</a>
+          
+            </li>
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" (click)="About()"href="javascript:void(0)" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About Us 
+              </a>
+           
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" (click)="company()" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Comapny List
+              </a>
+           
+            </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" (click)="job()" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                job List
+                </a>
+             
+              </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" (click)="contact()" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Contact Us 
+                </a>
+             
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" (click)="Testimonial()" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Testimonials 
+                </a>
+             
+              </li>
+            
+          </ul>
+        </div>
+        <div class="add-listing">
+            <div class="login d-inline-block me-4">
+              <a (click)="login()" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="far fa-user pe-2"></i>Sign in</a>
+            </div>
+            <!-- <a class="btn btn-white btn-md" (click)="login()"><i class="fas fa-plus-circle"></i>Post a job</a> -->
+          </div>
+      </div>
+    </nav>
+  </header>
+  <!--=================================
+  Header -->
+  

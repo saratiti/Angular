@@ -1,0 +1,57 @@
+
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "large" color = "#fff" type = "square-jelly-box" [fullScreen] = "false">
+
+    <p style="color: white" > Loading... </p></ngx-spinner><app-navbar></app-navbar>
+<h1>Page 1</h1>
+<h1>This is Home Page</h1>
+<h1>{{ service.name }}</h1>
+
+
+<h1>{{ service.data }}</h1>
+
+
+<app-footer></app-footer>
+
+
+
+
+<input type="number" [(ngModel)]="service.id"  placeholder="please enter the id" (change)="service.getstdbyid()"/>
+
+
+<h1>{{ service.data1.id }}</h1>
+<h1>{{ service.data1.fname }}</h1>
+<h1>{{ service.data1.lname }}</h1>
+
+<table>
+    <tr>
+    <th>Name</th>
+    <th>lname</th>
+</tr>
+<tr *ngFor="let item in service.data">
+    
+   <td *ngFor="let item1 in item|keyvalue">
+{{ item1.values }}     
+
+</td>
+</tr>
+</table>
+
+<table>
+    <tr><th>Fname</th>
+    <th>Lname</th>
+    <th>id</th>
+    </tr>
+<tr *ngFor="let item of service.data">
+    <td>{{ item.fname }}</td>
+    <td>{{ item.lname }}</td>
+    <td><button type="submit" (click)="openmatdialog(item.id)">Edit</button></td>
+  
+</tr>
+
+    
+</table>
+
+<input type="text" [(ngModel)]="firstname" placeholder="please enter the firstname"  />
+<input #imageinput  type="file" accept="image/*"  ngModel="imageinput" (change)="upload(imageinput.files)" />
+
+<button type="submit" (click)="getvaluemethod2()">Save</button>

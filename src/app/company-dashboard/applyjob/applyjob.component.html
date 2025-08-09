@@ -1,0 +1,210 @@
+<app-company-navbar></app-company-navbar>
+
+<!--=================================
+Dashboard Nav -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sticky-top secondary-menu-sticky-top">
+          <div class="secondary-menu">
+            <ul>
+            
+              <li><a (click)="profile()">My Profile</a></li>
+              
+              <li><a (click)="manage()">Manage Candidates</a></li>
+              <li><a (click)="managejob()">Manage Jobs</a></li>
+              <li><a (click)="postjob()">Post New Job</a></li>
+              <li><a class="active" (click)="appliedjob()">Applied job</a></li>
+              <li><a (click)="report()">Reports</a></li>
+              <li><a (click)="login()">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--=================================
+Dashboard Nav -->
+<!--=================================
+Employer Dashboard -->
+<section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row mb-3 mb-lg-5 mt-3 mt-lg-0">
+              <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="candidates-feature-info bg-dark">
+                  <div class="candidates-info-icon text-white">
+                    <i class="fas fa-globe-asia"></i>
+                  </div>
+                  <div class="candidates-info-content">
+                   <h6 class="candidates-info-title text-white">Total Applications</h6>
+                  </div>
+                  <div class="candidates-info-count">
+                    <h3 class="mb-0 text-white">
+                    <!-- #total apply --> {{count}}
+                  </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="candidates-feature-info bg-success">
+                  <div class="candidates-info-icon text-white">
+                    <i class="fas fa-thumbs-up"></i>
+                  </div>
+                  <div class="candidates-info-content">
+                   <h6 class="candidates-info-title text-white">Shortlisted Applications</h6>
+                  </div>
+                  <div class="candidates-info-count">
+                    <h3 class="mb-0 text-white">
+                      <!-- accepted apply -->{{accpetcount}}
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="candidates-feature-info bg-danger">
+                  <div class="candidates-info-icon text-white">
+                    <i class="fas fa-thumbs-down"></i>
+                  </div>
+                  <div class="candidates-info-content">
+                   <h6 class="candidates-info-title text-white">Rejected Applications</h6>
+                  </div>
+                  <div class="candidates-info-count">
+                    <h3 class="mb-0 text-white"><!-- Rejected apply -->{{rejcount}}</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+         
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        
+          <div class="user-dashboard-info-box mb-0">
+            <div class="section-title-02 mb-4">
+              <h4>Jobs Applied</h4>
+            </div>
+  
+  
+            <div style="background-color:#f6f6f6 " class="job-search-field">
+              <div class="job-search-item">
+                <form [formGroup]="searchTwoDate" class="form row">
+                  <div class="col-lg-5">
+                    <div class="form-group mb-3">
+                      <div class="d-flex">
+                        <label class="form-label">from</label>
+                        <span class="ms-auto">e.g.  02/02/2022</span>
+                      </div>
+                      <div class="position-relative left-icon">
+                        <input  type="date"formControlName="DateFrom" class="form-control location-input" placeholder="from Date">
+                   
+                        <i  class="fas fa-calendar-alt"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="form-group mb-3">
+                      <div class="d-flex">
+                        <label class="form-label">To</label>
+                        <span class="ms-auto">e.g. 03/22/2022</span>
+                      </div>
+                      <div class="position-relative left-icon">
+                        <input  type="date" formControlName="DateTo" class="form-control location-input"  placeholder="End Date">
+                   
+                        <i  class="fas fa-calendar-alt"></i>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="col-lg-2 col-sm-12">
+                    <div class="form-group mb-3 form-action">
+                      <button type="submit"(click)="searchDate()"  class="btn btn-primary btn-lg"><i class="fas fa-search"></i> Find Jobs</button>
+                    </div>
+                  </div>
+                  
+                </form>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div *ngFor="let job of applysercive.dataclient" class="col-12">
+                <div class="job-list ">
+                  <div class="job-list-logo">
+                    <!-- Image company Logo -->
+                    <img class="img-fluid" src="../../../assets/images/{{job.imagename}}" alt="">
+                  </div>
+                  <div class="job-list-details">
+                    <div class="job-list-info">
+                      <div class="job-list-title">
+                        <!-- full Name job -->
+                        <h5 class="mb-0"><a href="job-detail.html">{{job.joptitle}}</a></h5>
+                      </div>
+                      <div class="job-list-option">
+                        <ul class="list-unstyled">
+                         
+                      <!-- address -->
+                          <li><i class="fas fa-map-marker-alt pe-1"></i>{{job.joblocation}}</li> 
+                      
+                        </ul>
+                      </div>
+                      <div class="job-list-option">
+                        <ul class="list-unstyled">
+                          <!-- companyURl -->
+                          <li> <i class="fas fa-user"></i> <!-- User Name --> {{job.fname}} {{job.lname}}</li>
+                      <!-- address 
+                          <li><i class="fas fa-map-marker-alt pe-1"></i>Wellesley Rd, London</li> -->
+                      
+                        </ul>
+                      </div>
+                      <div class="job-list-option">
+                        <ul class="list-unstyled">
+            
+                         <!-- date start -->
+                          <li>  <i  class="fas fa-calendar-alt"></i> Apply Date {{job.applydate|date:'mediumDate'}}<!-- Apply Date --></li>
+                            <!-- date End -->
+                            <li>  <i  class="fas fa-calendar-alt"></i> Response Date {{job.responsedate|date:'mediumDate'}}<!-- ResponsDate  --></li>
+                           
+                          
+                         
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="job-list-favourite-time"> 
+                    <!-- <a class="order-2 mb-3 d-block" href="#">
+                       </a>  -->
+                       <span class="job-list-time order-1">
+                         <!-- Stated --> {{job.stutus}}</span> </div>
+                </div>
+              </div>
+           
+            </div>
+            <!-- <div class="row">
+              <div class="col-12 text-center mt-5">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled"> <span class="page-link b-radius-none">Prev</span> </li>
+                  <li class="page-item active" aria-current="page"><span class="page-link">1 </span> <span class="sr-only">(current)</span></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">...</a></li>
+                  <li class="page-item"><a class="page-link" href="#">25</a></li>
+                  <li class="page-item"> <a class="page-link" href="#">Next</a> </li>
+                </ul>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================
+  Employer Dashboard -->

@@ -1,0 +1,276 @@
+<app-admin-navbar></app-admin-navbar>
+  
+  <!--=================================
+  Dashboard Nav -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sticky-top secondary-menu-sticky-top">
+            <div class="secondary-menu">
+              <ul>
+                <!-- <li><a href="dashboard-employer.html">Dashboard</a></li> -->
+                <li><a (click)="profile()">My Profile</a></li> 
+                
+                <li><a (click)="company()">Company Details</a></li>
+                <li><a  (click)="job()">Job Vacancy</a></li>
+                <li><a   (click)="applyjob()">Job Applied</a></li>
+                <li><a  (click)="User()">User Details</a></li>
+                <li><a (click)="Report()">Reports</a></li>
+                <li><a (click)="message()">Message</a></li>
+                <li><a class="active"  (click)="Manage()">Manage Site</a></li>
+                <li><a (click)="login()">Log Out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="space-ptb">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+    
+      
+         
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="category-style text-center">
+                <a (click)="edithome()" class="category-item">
+                  <div class="category-icon mb-4">
+                    <i class="fas fa-home"></i>
+                  </div>
+                  <h6>Home</h6>
+                  <span class="mb-0">   <i  class="fas fa-pencil-alt p-2"></i>  
+                   
+                  </span>
+                </a>
+                <a (click)="editabout()" class="category-item">
+                  <div class="category-icon mb-4">
+                    <i class="flaticon-team"></i>
+                  </div>
+                  <h6>About Us</h6>
+                  <span class="mb-0">   <i  class="fas fa-pencil-alt p-2"></i>  
+                   
+                  </span>
+                </a>
+                <a class="category-item">
+                  <div class="category-icon mb-4">
+                    <i class="fas fa-images"></i>
+                  </div>
+                  <h6>Slider</h6>
+                  <span class="mb-0">   <i  (click)="addslider()"  class="fas fa-plus p-2"></i> 
+                     <i (click)="editslider()" class="fas fa-pencil-alt p-2"></i>  
+                      
+                     <!-- <i class="far fa-trash-alt p-2"></i> -->
+                  </span>
+                </a>
+                <a (click)="edittets()" class="category-item">
+                  <div class="category-icon mb-4">
+                    <i class="flaticon-conversation"></i>
+                  </div>
+                  <h6>Testimonial</h6>
+                
+                  <span class="mb-0">   
+                    <i class="fas fa-pencil-alt p-2"></i> 
+                 </span>
+                </a>
+          
+            
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <ng-template #callupdatehomeDialog>
+    <form [formGroup]="Updatehome" >
+      <div class="row">
+        <!-- <div class="form-group col-md-6 mb-3">
+          <label class="form-label">Company Name</label>
+          <input type="text" class="form-control" value="Fleet Improvements Pvt">
+        </div> -->
+      
+        <div class="form-group col-md-6 mb-3">
+          <label class="form-label">Website Name</label>
+          <input type="text" formControlName="namehome" class="form-control"  >
+  
+        </div>
+       
+      </div>
+      <a class="btn btn-md btn-primary" (click)="update()">Update</a>
+      <a class="btn btn-md btn-primary"  mat-dialog-close>Cancel</a>
+
+  
+    </form>
+    
+    </ng-template>
+
+
+<!-- update About form -->
+    
+  <ng-template #callupdateaboutDialog>
+    <form [formGroup]="Updateabout" >
+      <div class="row">
+     
+      
+        <div class="form-group col-md-6 mb-3">
+          <label class="form-label">Title</label>
+          <input type="text" formControlName="title" class="form-control"  >
+  
+        </div>
+        <div class="form-group col-md-6 mb-3">
+          <label class="form-label">Caption</label>
+          <input type="text" formControlName="caption" class="form-control"  >
+  
+        </div>
+        <div class="form-group col-md-6 mb-3">
+          <label class="form-label">Image</label>
+          <input #file type="file"   class="form-control"  (change)="uploadFile($event)" >
+
+  
+        </div>
+       
+      </div>
+      <a class="btn btn-md btn-primary" (click)="updateabout()">Update</a>
+      <a class="btn btn-md btn-primary"  mat-dialog-close>Cancel</a>
+    </form>
+
+    </ng-template>
+
+    <!-- get all slider -->
+    <ng-template #callsliderDialog>
+      <div class="row">
+        <div *ngFor="let slider of home.slidedata" class="col-md-4 ">
+      <mat-card  class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{slider.title}}</mat-card-title>
+        
+        </mat-card-header>
+        <img mat-card-image src="../../../assets/images/{{slider.imagePath}}" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+        {{slider.caption}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+     
+          <button mat-button (click)="editsliderbyid(slider.id)">UPDATE</button>
+          <button mat-button (click)="deleteslider(slider.id)">DELETE</button>
+          <!-- <button mat-button mat-dialog-close>Cancel</button> -->
+         
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  </ng-template> 
+
+  <!-- update slider form -->
+  <ng-template #callupdatesliderDialog>
+    <form [formGroup]="updateeslider" >
+      <div class="row">
+        <div class="form-group col-md-12 mb-3">
+          <label class="form-label">Title</label>
+          <input type="text" formControlName="title" class="form-control"  >
+  
+        </div>
+        <div class="form-group col-md-12 mb-3">
+          <label class="form-label">Caption</label>
+          <input type="text" formControlName="caption" class="form-control"  >
+  
+        </div>
+        <div class="form-group col-md-6 mb-3">
+          <label class="form-label">Image</label>
+          <input #file type="file"   class="form-control" (change)="uploadFileslider($event)" >
+
+
+        </div>
+      </div>
+      <a class="btn btn-md btn-primary" (click)="updateslider()">Update</a>
+      <a class="btn btn-md btn-primary"  mat-dialog-close>Cancel</a>
+    </form>
+
+
+    <!-- create slider -->
+ 
+    </ng-template>
+    <ng-template #callcreateesliderDialog>
+      <form [formGroup]="createslider" >
+        <div class="row">
+          <!-- <div class="form-group col-md-12 mb-3">
+          <img class="img-fluid" style="width: 200px; height:100px;" src="../../../assets/ass1/images/slider/banner-01.jpg" alt="">
+        </div> -->
+          <div class="form-group col-md-6 mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" formControlName="title" class="form-control"  >
+    
+          </div>
+          <div class="form-group col-md-6 mb-3">
+            <label class="form-label">Caption</label>
+            <input type="text" formControlName="caption" class="form-control"  >
+    
+          </div>
+          <div class="form-group col-md-6 mb-3">
+            <label class="form-label">Image</label>
+            <input #file (change)="uploadFileslider($event)"type="file"  class="form-control"  >
+  
+
+
+            
+          </div>
+        </div>
+        <a class="btn btn-md btn-primary" (click)="Createslider()">Create</a>
+        <a class="btn btn-md btn-primary"  mat-dialog-close>Cancel</a>
+      </form>
+  
+   
+      </ng-template>
+
+
+
+
+
+
+
+
+
+
+      <!-- //Testimonial -->
+    <ng-template #callupdatetestDialog>
+      <i class="fa-solid fa-comment-check"></i>
+      <i class="fa-solid fa-circle-xmark"></i>
+
+      <div class="row">
+        <div *ngFor="let test of home.datatesti" class="col-md-3 ">
+      <mat-card  class="example-card">
+      
+        <img mat-card-image src="../../../assets/images/{{test.imagePath}}"  style="width: 160px;
+        border-radius: 50%;">
+        <mat-card-content>
+          <strong>
+            {{test.nickName}}
+          </strong>
+              <p>
+                {{test.message}}
+                  </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <i style="color: chocolate; cursor: pointer;"  (click)="accpet(test.id)" class="fas  fa-check p-2"></i>
+            <i style="color: chocolate; cursor: pointer;" (click)="deletetest(test.id)" class="far fa-trash-alt p-2"></i>
+          <!-- <button mat-button (click)="editsliderbyid(test.id)">Accept</button>
+          <button mat-button (click)="deleteslider(test.id)">DELETE</button> -->
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+      </ng-template>
+    

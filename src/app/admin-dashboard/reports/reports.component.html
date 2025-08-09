@@ -1,0 +1,134 @@
+<app-admin-navbar></app-admin-navbar>
+ <!--=================================
+  Dashboard Nav -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sticky-top secondary-menu-sticky-top">
+            <div class="secondary-menu">
+              <ul>
+                <!-- <li><a href="dashboard-employer.html">Dashboard</a></li> -->
+                <li><a  (click)="profile()">My Profile</a></li> 
+                
+                <li><a  (click)="company()">Company Details</a></li>
+                <li><a  (click)="job()">Job Vacancy</a></li>
+                <li><a   (click)="applyjob()">Job Applied</a></li>
+                <li><a  (click)="User()">User Details</a></li>
+                <li><a class="active"(click)="Report()">Reports</a></li>
+                <li><a  (click)="message()">Message</a></li>
+                <li><a  (click)="Manage()">Manage Site</a></li>
+                <li><a (click)="login()">Log Out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================
+  Dashboard Nav -->
+  <div class="container ">
+
+  <div style="background-color:#f6f6f6 " class="job-search-field">
+    <div class="job-search-item">
+      <form [formGroup]="searchTwoDate" class="form row">
+        <div class="col-lg-5">
+          <div class="form-group mb-3">
+            <div class="d-flex">
+              <label class="form-label">from</label>
+              <span class="ms-auto">e.g.  02/02/2022</span>
+            </div>
+            <div class="position-relative left-icon">
+              <input  type="date"formControlName="DateFrom" class="form-control location-input" placeholder="from Date">
+         
+              <i  class="fas fa-calendar-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="form-group mb-3">
+            <div class="d-flex">
+              <label class="form-label">To</label>
+              <span class="ms-auto">e.g. 03/22/2022</span>
+            </div>
+            <div class="position-relative left-icon">
+              <input  type="date" formControlName="DateTo" class="form-control location-input"  placeholder="End Date">
+         
+              <i  class="fas fa-calendar-alt"></i>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-lg-2 col-sm-12">
+          <div class="form-group mb-3 form-action">
+            <button type="submit"(click)="searchDate()"  class="btn btn-primary btn-lg"><i class="fas fa-search"></i> Find Jobs</button>
+          </div>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</div>
+  <div class="container mt-5 ">
+  <div class="row">
+    <div class="col-lg-6 col-sm-12 p-3">
+      <div  id="chart">
+      </div> 
+  
+    <div id="pdfTable" #pdfTable>
+      <h2>Number of Company 
+        <!-- <span style="font-size: 18px;color:#ff8a00 ;"> [{{dayofcompany[0]}} - {{end}}]</span>-->
+        </h2> 
+  
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Number of Company </th>
+            <th>registerDate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of compan.count">
+            <td>{{i.countcompany}}</td>
+            <td>{{i.registerDate |date:'mediumDate'}}</td>
+          </tr>
+        
+        </tbody>
+      </table>
+    </div>
+    <button class="btn btn-primary" (click)="downloadAsPDF();">Export To PDF</button>
+    </div>
+    <div class="col-lg-6 col-sm-12 p-3">
+      <div  id="chart1">
+      </div> 
+      <div id="pdfTable1" #pdfTable1>
+        <h2>Number of job 
+          <!-- <span style="font-size: 18px;color:#ff8a00 ;"> [{{dayofcompany[0]}} - {{end}}]</span> -->
+        </h2>
+    
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Company Name </th>
+              <th>Number of job </th>
+              <th>Posting Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let i of j.countofjob">
+  
+              <td>{{i.fullname}}</td>
+              <td>{{i.countjob}}</td>
+              <td>{{i.postingdate |date:'mediumDate'}}</td>
+            </tr>
+          
+          </tbody>
+        </table>
+      </div>
+      <button class="btn btn-primary" (click)="downloadAsPDF1();">Export To PDF</button>
+    </div>
+  </div>
+ 
+</div>
+

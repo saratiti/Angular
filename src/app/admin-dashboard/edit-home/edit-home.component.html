@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>Edit Home</h2>
+<mat-dialog-content  class="mat-typography">
+  <form [formGroup]="Updatehome" >
+    <div class="row">
+      <!-- <div class="form-group col-md-6 mb-3">
+        <label class="form-label">Company Name</label>
+        <input type="text" class="form-control" value="Fleet Improvements Pvt">
+      </div> -->
+    
+      <div class="form-group col-md-6 mb-3">
+        <label class="form-label">Website Name</label>
+        <input type="text" formControlName="namehome" class="form-control"  >
+
+      </div>
+    
+   
+     
+  
+     
+    </div>
+    
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions  align="end">
+  <button (click)="update()" mat-button [mat-dialog-close]="true" cdkFocusInitial>Update</button>
+  <button mat-button mat-dialog-close>Cancel</button>
+
+</mat-dialog-actions>

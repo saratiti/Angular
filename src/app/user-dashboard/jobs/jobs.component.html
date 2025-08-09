@@ -1,0 +1,138 @@
+<app-user-navbar></app-user-navbar>
+  <!--=================================
+  Dashboard Nav -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sticky-top secondary-menu-sticky-top">
+            <div class="secondary-menu">
+              <ul class="list-unstyled mb-0">
+                <li><a  (click)="profile()">My Profile</a></li> 
+                <!-- <li><a (click)="password()">Change Password</a></li> -->
+                <li><a (click)="education()">Education</a></li>
+                <li><a (click)="message()">Message</a></li>
+
+                <li><a  (click)="job()">Job Vacancy</a></li>
+                <li><a  class="active"(click)="applyjob()">Job Applied</a></li>
+                <li><a  (click)="testimonial()">Testimonial</a></li>
+                <li><a (click)="logout()">Log Out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!--=================================
+Manage Jobs -->
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div style="background-color:#f6f6f6 ;" class="p-4 mb-2">
+          <div class="position-relative">
+            <strong> <i class="fas fa-filter pe-1 pb-1"></i>filter</strong>
+            <ul class="nav nav-tabs" id="pills-tab" role="tablist">
+              <li class="nav-item me-1">
+                <a class="nav-link active" id="interviews-tab" data-bs-toggle="pill" (click)="getallmessage()" role="tab" aria-controls="interviews" aria-selected="false">Total applied</a>
+              </li>
+              <li class="nav-item me-1">
+                <a class="nav-link " id="job-tab" data-bs-toggle="pill" (click)="today()" role="tab" aria-controls="job" aria-selected="true">Today’s applied </a>
+              </li>
+              <li class="nav-item me-1">
+                <a class="nav-link" id="companies-tab" data-bs-toggle="pill" (click)="yesterday()" role="tab"  aria-selected="false"> Yesterday applied</a>
+              </li>
+              <li class="nav-item me-1">
+                <a class="nav-link" id="salaries-tab" data-bs-toggle="pill"(click)="sevenday()" role="tab"  aria-selected="false">7 days applied </a>
+              </li>
+             
+            </ul>
+            <!-- <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="job" role="tabpanel" aria-labelledby="job-tab">
+               <div class="search mt-3">
+                  <a href="#"><i class="fas fa-search me-1"></i> Search </a>
+                  <input type="text" class="form-control border-0" placeholder="Search for Jobs">
+                </div> 
+              </div>
+              <div class="tab-pane fade" id="companies" role="tabpanel" aria-labelledby="companies-tab">
+                <div class="search mt-3">
+                  <a href="#"><i class="fas fa-search me-1"></i> Search </a>
+                  <input type="text" class="form-control border-0" placeholder="Search for Jobs">
+                </div>
+              </div>
+              <div class="tab-pane fade" id="salaries"  role="tabpanel" aria-labelledby="salaries-tab">
+                <div class="search mt-3">
+                  <a href="#"><i class="fas fa-search me-1"></i> Search </a>
+                  <input type="text" class="form-control border-0" placeholder="Search for Jobs">
+                </div>
+              </div>
+              <div class="tab-pane fade" id="interviews"  role="tabpanel" aria-labelledby="interviews-tab">
+                <div class="search mt-3">
+                  <a href="#"><i class="fas fa-search me-1"></i> Search </a>
+                  <input type="text" class="form-control border-0" placeholder="Search for Jobs">
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="user-dashboard-info-box table-responsive pb-4 mb-0">
+          <table class="table manage-candidates-top mb-0">
+            <thead>
+              <tr>
+                <th>Jobs </th>
+
+                <th>   Apply Date </th>
+               
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let m of mess.message" class="candidates-list">
+                <td  class="title">
+                  <div class="thumb">
+                      <!-- company logo  -->
+                    <img class="img-fluid" src="../../../assets/images/{{m.logoImage}}" alt="">
+                  </div>
+                  <div class="candidate-list-details">
+                    <div class="candidate-list-info">
+                      <div class="candidate-list-title">
+                          <!-- Company Name -->
+                        <h5 class="mb-0"><a href="#">{{m.fullname}}</a></h5>
+                      </div>
+                      <div class="candidate-list-option">
+                        <ul class="list-unstyled">
+                          <!-- job title -->
+                          <li><i class="fas fa-filter pe-1"></i>{{m.joptitle}}</li>
+                          <!--address-->
+                          <!-- <li><i class="fas fa-map-marker-alt pe-1"></i>Canyon Village, Ramon</li> -->
+                        </ul>
+                      </div>
+                  
+                    </div>
+                  </div>
+                </td>
+                <td class="candidate-list-favourite-time text-center">
+                  <a class="candidate-list-favourite order-2 text-danger" href="#">
+                    <!-- RESPONSE DATE -->
+                      <i class="fas fa-calendar-alt pe-1"></i>{{m.applydate |date:'mediumDate' }}
+                    </a>
+                </td>
+              
+              </tr>
+            </tbody>
+          </table>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  

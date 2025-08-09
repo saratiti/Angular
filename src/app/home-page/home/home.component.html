@@ -1,0 +1,287 @@
+
+<app-nav-bar></app-nav-bar>
+<!--=================================
+Banner -->
+
+<!--=================================
+Banner -->
+<section class="clearfix slider-banner">
+  <div id="slider" class="carousel slide" data-ride="carousel">
+    <!-- <ol  class="carousel-indicators">
+      <li data-bs-target="#slider" data-bs-slide-to="0" class="active"></li>
+      <li *ngFor="let slide of home.slidedata.slice(1, home.slidedata.length);let index=index"  data-bs-target="#slider" [data-bs-slide-to]="index"></li>
+    
+    </ol> -->
+  
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="img-fluid" src="../../../assets/images/{{imageactive}}" alt="">
+        <div class="slider-content">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-sm-7 justify-content-center text-center">
+                <!-- <h2 class="text-white animated-08"><u>Job portal</u></h2> -->
+                  <h1 class="text-white animated-08">{{titleactive}}</h1>
+                  <h6 class="mb-2 fw-normal text-white animated-08">{{captionactive}}</h6>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let slide of home.slidedata.slice(1, home.slidedata.length )" class="carousel-item ">
+        <img class="img-fluid" src="../../../assets/images/{{slide.imagePath}}" alt="">
+        <div class="slider-content">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-sm-7 justify-content-center text-center">
+                <!-- <h2 class="text-white animated-08"><u>You deserve it</u></h2> -->
+                  <h1 class="text-white animated-08">{{slide.title}}</h1>
+                  <h6 class="mb-2 fw-normal text-white animated-08">{{slide.caption}}</h6>
+                  <!-- <div class="d-flex justify-content-center">
+                  <a href="#" class="btn btn-link animated-08">View more <i class="fas fa-arrow-right ps-2"></i></a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#slider" role="button" data-bs-slide="prev" data-bs-target="#slider">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#slider" role="button" data-bs-slide="next" data-bs-target="#slider">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</section>
+<!--=================================
+Banner -->
+
+  <section class="bg-dark">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <div class="counter my-4">
+            <div class="counter-icon">
+              <i class="flaticon-curriculum"></i>
+            </div>
+            <div class="counter-content">
+              <span class="timer text-white" data-to="10" data-speed="10000">{{countofjob}}</span>
+              <label class="mb-0 text-white">Jobs Posted</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="counter my-4">
+            <div class="counter-icon">
+              <i class="flaticon-resume"></i>
+            </div>
+            <div class="counter-content">
+              <span class="timer mb-1 text-white" data-to="9" data-speed="10000">{{countofapply}}</span>
+              <label class="mb-0 text-white">Jobs Filled</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="counter my-4">
+            <div class="counter-icon">
+              <i class="flaticon-suitcase"></i>
+            </div>
+            <div class="counter-content">
+              <span class="timer mb-1 text-white" data-to="10" data-speed="10000">{{countofcompany}}</span>
+              <label class="mb-0 text-white">Companies</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="counter my-4">
+            <div class="counter-icon">
+              <i class="flaticon-users"></i>
+            </div>
+            <div class="counter-content">
+              <span class="timer mb-1 text-white" data-to="4" data-speed="10000">{{countofuser}}</span>
+              <label class="mb-0 text-white">Members</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+ <!--=================================
+Easiest Way to Use -->
+<section class="space-pb">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <div class="section-title center">
+          <h2 class="title">Easiest Way to Use</h2>
+          <p>Give yourself the power of responsibility. Remind yourself the only thing stopping you is yourself.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row bg-holder-pattern mt-3 mt-md-4 me-md-0 ms-md-0" style="background-image: url('images/step/pattern-01.png');">
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="feature-step text-center">
+          <div class="feature-info-icon">
+            <i class="flaticon-resume"></i>
+          </div>
+          <div class="feature-info-content pb-2 pb-md-0">
+            <h5>Create Account</h5>
+            <p class="mb-0">Create an account and access your saved settings on any device.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="feature-step text-center">
+          <div class="feature-info-icon">
+            <i class="flaticon-recruitment"></i>
+          </div>
+          <div class="feature-info-content pb-2 pb-md-0">
+            <h5>Find Your Vacancy</h5>
+            <p class="mb-0">Don't just find. Be found. Put your CV in front of great employers.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-0">
+        <div class="feature-step text-center">
+          <div class="feature-info-icon">
+            <i class="flaticon-position"></i>
+          </div>
+          <div class="feature-info-content pb-2 pb-md-0">
+            <h5>Get A Job</h5>
+            <p class="mb-0">Your next career move starts here. Choose Job from thousands of companies</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<!--=================================
+Easiest Way to Use -->
+  <!--=================================
+  Browse listing  -->
+  <section class="space-ptb bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="browse-job d-flex">
+            <h3 class="mb-4 mb-md-3">jobs Listing </h3>
+            <div class="justify-content-center flex-fill">
+            </div>
+            <div class="job-found mb-4 mb-md-3">
+              <!-- number of job -->
+              <span class="badge badge-lg bg-primary">{{countofjob}}</span>
+              <h6 class="ms-3 mb-0">Job Found</h6>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div *ngFor="let j of jobvac.datajobvac.slice(0, 4);" class="tab-pane fade active show" id="Jobs" role="tabpanel" aria-labelledby="Jobs-tab">
+              <div class="row">
+                <div class="col-lg-12 mb-4 mb-sm-0">
+                  <div class="job-list">
+                    <div class="job-list-logo">
+                      <!-- comapny logo -->
+                      <img class="img-fluid" src="../../../assets/images/{{j.logoImage}}" alt="">
+                    </div>
+                    <div class="job-list-details">
+                      <div class="job-list-info">
+                        <div class="job-list-title">
+                          <h5 class="mb-0"><a href="job-detail.html">{{j.joptitle}}</a></h5>
+                        </div>
+                        <div class="job-list-option">
+                          <ul class="list-unstyled">
+                            <li>
+                         
+                              <a href="employer-detail.html">{{j.fullname}}</a>
+                            </li>
+                            <li><i class="fas fa-map-marker-alt pe-1"></i>{{j.joblocation}}</li>
+                            <li>  $   <!-- Salary --> {{j.salary}} </li>
+                          <li>  <i  class="fas fa-calendar-alt"></i> <!-- date start --> {{j.applaydate |date:'mediumDate'}} -  <!-- date End --> {{j.lastdate | date:'mediumDate'}}</li>
+
+                           <li><i class="far fa-clock pe-2"></i><!--open job-->{{j.opening }}</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+             
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-12 justify-content-center d-flex mt-4 mt-md-5">
+            <a class="btn btn-white btn-lg" (click)="joblist()">View More Jobs</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================
+  Browse listing -->
+  
+  <br>
+  
+ 
+  
+
+  <!--=================================
+Let’s Get In Touch -->
+<section class="space-ptb pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title-02 text-center">
+          <h2>Let’s Get In Touch!</h2>
+          <p>We have completed over a 1000+ projects for five hundred clients. Give us your next project.</p>
+        </div>
+      </div>
+    </div>
+    <form [formGroup]="createcontact">
+      <div class="row">
+        <div class="form-group col-md-6 mb-3">
+          <input formControlName="userName" type="text" class="form-control"  placeholder="Enter Your Name">
+          <mat-error style="color: brown;" *ngIf="myError('userName', 'required') ">
+            User Name is <strong>required</strong>
+          </mat-error>
+        </div>
+     
+        <div class="form-group col-md-6 mb-3">
+          <input formControlName="email" type="text" class="form-control"  placeholder="Enter Your Email Address">
+          <mat-error style="color: brown;" *ngIf="myError('email', 'required') ">
+           Email is <strong>required</strong>
+          </mat-error>
+          <mat-error style="color: brown;" *ngIf=" myError('email', 'pattern') ">
+            Email is <strong>Not valid</strong>
+          </mat-error>
+        </div>
+        <div class="form-group col-md-6 mb-3">
+          <input formControlName="phone" type="text" class="form-control" id="phone" placeholder="Enter Your Phone Number">
+          <mat-error style="color: brown;" *ngIf="myError('phone', 'required') ">
+           Phone is <strong>required</strong>
+          </mat-error>
+          <mat-error style="color: brown;" *ngIf=" myError('phone', 'pattern') ">
+            Phone is <strong>Not valid</strong>
+          </mat-error>
+        </div>
+        <div class="form-group col-12 mb-0">
+          <textarea formControlName="message"rows="5" class="form-control" id="sector" placeholder="Subject"></textarea>
+          <mat-error style="color: brown;" *ngIf="myError('message', 'required') ">
+            Message is <strong>required</strong>
+           </mat-error>
+        </div>
+        <div class="col-12 text-center mt-4">
+          <a class="btn btn-primary" (click)="sendMessage()">Send your message</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<app-footer></app-footer>

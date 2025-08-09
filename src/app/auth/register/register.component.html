@@ -1,0 +1,247 @@
+<app-nav></app-nav>
+
+<!--=================================
+inner banner -->
+<div class="header-inner bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-primary">Register</h2>
+          <ol class="breadcrumb mb-0 p-0">
+            <li class="breadcrumb-item"><a href="index.html"> Home </a></li>
+            <li class="breadcrumb-item active"> <i class="fas fa-chevron-right"></i> <span> Register </span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=================================
+  inner banner -->
+  <!--=================================
+Register -->
+<section class="space-ptb">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-8 col-lg-10 col-md-12">
+          <div class="login-register">
+           <div class="section-title">
+            <h4 class="text-center">Create Your Account</h4>
+           </div>
+            <fieldset>
+              <legend class="px-2">Choose your Account Type</legend>
+              <ul class="nav nav-tabs nav-tabs-border d-flex" role="tablist">
+                <li class="nav-item me-4">
+                  <a class="nav-link active"  data-bs-toggle="tab" href="#candidate" role="tab" >
+                    <div class="d-flex">
+                      <div class="tab-icon">
+                        <i class="flaticon-users"></i>
+                      </div>
+                      <div class="ms-3">
+                        <h6 class="mb-0">Candidate</h6>
+                        <p class="mb-0">I want to discover companies.</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item ms-auto">
+                  <a class="nav-link" data-bs-toggle="tab" href="#employer" role="tab">
+                    <div class="d-flex">
+                      <div class="tab-icon">
+                        <i class="flaticon-suitcase"></i>
+                      </div>
+                      <div class="ms-3">
+                        <h6 class="mb-0">Employer</h6>
+                        <p class="mb-0">I want to attract the best talent.</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </fieldset>
+            <div class="tab-content">
+              <div class="tab-pane active" id="candidate" role="tabpanel">
+                <form [formGroup]="userregister" class="mt-4">
+                  <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <!-- fName in client table -->
+                      <label class="form-label" for="fname">First Name *</label>
+                      <input formControlName="fname"  type="text" class="form-control">
+                      <mat-error  style="color: brown;" *ngIf="myError('fname', 'required') ">
+                        first Name is <strong>required</strong>
+                      </mat-error>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <!-- LName in cliant  table -->
+                      <label class="form-label" for="lname">Last Name *</label>
+                      <input formControlName="lname"  type="text" class="form-control">
+                      <mat-error  style="color: brown;" *ngIf="myError('lname', 'required') ">
+                        Last Name is <strong>required</strong>
+                      </mat-error>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <!-- userName in login table -->
+                      <label class="form-label" for="Username">Username *</label>
+                      <input  formControlName="userName" type="text" class="form-control">
+                      <mat-error  style="color: brown;" *ngIf="myError('userName', 'required') ">
+                       User Name is <strong>required</strong>
+                      </mat-error>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <!-- email in client or  table -->
+                      <label class="form-label">Email Address *</label>
+                      <input  formControlName="email" type="text" class="form-control">
+                      <mat-error  style="color: brown;" *ngIf="myError('email', 'required') ">
+                        Email is <strong>required</strong>
+                       </mat-error>
+                       <mat-error  style="color: brown;" *ngIf="myError('email', 'email') ">
+                        Email is <strong>not valid</strong>
+                       </mat-error>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <!-- password in login -->
+                      <label class="form-label">Password *</label>
+                      <input formControlName="c_Password" type="password" class="form-control">
+                      <mat-error  style="color: brown;" *ngIf="myError('c_Password', 'required') ">
+                        Password is <strong>required</strong>
+                       </mat-error>
+                    </div>
+                    <!-- <div class="mb-3 col-md-6">
+                      <label class="form-label" for="password2">Confirm Password *</label>
+                      <input formControlName="ConfirmPassword" type="password" class="form-control">
+                      <mat-error style="color: brown;" *ngIf="myError('ConfirmPassword', 'required') ">
+                        Confirm Password is <strong>required</strong>
+                      </mat-error>
+                      <mat-error style="color: brown;" *ngIf=" myError('ConfirmPassword', 'matching') ">
+                        Confirm Password is <strong>Not Match</strong>
+                      </mat-error>
+                    </div> -->
+                    <div class="mb-3 col-6">
+                        <!-- phone in client  -->
+                      <label class="form-label" for="phone">Phone:</label>
+                      <input formControlName="phone" type="text" class="form-control">
+                      <mat-error  style="color: brown;" *ngIf="myError('phone', 'pattern') ">
+                        Phone is <strong>not valid</strong>
+                       </mat-error>
+                    </div>
+                  
+                    <div class="mb-3 col-6">
+                        <!-- birthday  in client  -->
+                      <label class="form-label" for="phone">BirthDay:</label>
+                      <input formControlName="birthOfDate" type="date" class="form-control">
+                    </div>
+                   <!-- <div class="mb-3 col-6">
+                   <label class="form-label"for="formFile"  >Your Image:</label> 
+
+                    
+         
+               
+
+                <label style="background-color: #011935;" for="formFile" class="form-label"  (click)="file.click()">Upload your Photo</label>
+
+                <input  class="form-control" type="file" #file placeholder="Choose Image" 
+                (change)="uploadFile($event)" 
+                style="display:none;"> 
+
+                <label class="form-label">Image</label>
+                <input #file type="file"   class="form-control" (change)="uploadFile($event)" >
+             
+        
+                    </div>  -->
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <a class="btn btn-primary d-block" (click)="signupuser()">Sign up</a>
+                    </div>
+                    <div class="col-md-6 text-md-end mt-2 text-center">
+                      <p>Already registered? <a style="color: #e07900;" (click)="login()"> Sign in here</a></p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="employer" role="tabpanel">
+                <form [formGroup]="companyregister" class="mt-4">
+                  <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="form-label"for="fullname">Full Name *</label>
+                        <input formControlName="fullname" type="text" class="form-control" id="fullname">
+                        <mat-error  style="color: brown;" *ngIf="myError1('fullname', 'required') ">
+                          Full Name is <strong>required</strong>
+                         </mat-error>
+                      </div>
+                    <div class="mb-3 col-md-6">
+                      <label class="form-label"for="Username">Username *</label>
+                      <input formControlName="userName" type="text" class="form-control" id="Username">
+                      <mat-error  style="color: brown;" *ngIf="myError1('userName', 'required') ">
+                        User Name is <strong>required</strong>
+                       </mat-error>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                      <label class="form-label"for="email">Email Address *</label>
+                      <input formControlName="email" type="text" class="form-control" id="email">
+                      <mat-error  style="color: brown;" *ngIf="myError1('email', 'required') ">
+                        Email is <strong>required</strong>
+                       </mat-error>
+                       <mat-error  style="color: brown;" *ngIf="myError1('email', 'email') ">
+                        Email is <strong>not valid</strong>
+                       </mat-error>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                      <label class="form-label">Password *</label>
+                      <input  formControlName="password" type="password" class="form-control" id="Password">
+                      <mat-error  style="color: brown;" *ngIf="myError1('password', 'required') ">
+                        Password is <strong>required</strong>
+                       </mat-error>
+                    </div>
+                    <!-- <div class="mb-3 col-md-6">
+                      <label class="form-label" for="password2">Confirm Password *</label>
+                      <input type="password" class="form-control" id="password2">
+                    </div> -->
+                    <div class="mb-3 col-6">
+                        <label class="form-label" for="companyUrl">Company URL</label>
+                        <input  formControlName="companyUrl" type="text" class="form-control" id="companyUrl">
+                      </div>
+                    <div class="mb-3 col-6">
+                      <label class="form-label" for="phone">Phone</label>
+                      <input  formControlName="phone" type="text" class="form-control" id="phone">
+                      <mat-error  style="color: brown;" *ngIf="myError1('phone', 'pattern') ">
+                        Phone is <strong>not valid</strong>
+                       </mat-error>
+                    </div>
+                    <!-- <div class="mb-3 col-6">
+                      <label class="form-label"for="formFile"  >Image Logo:</label>
+  
+                <div  class="upload-file">
+                 
+  
+                  <label style="background-color: #011935;"  for="formFile" class="form-label"  (click)="file.click()">Upload Logo Image</label>
+  
+                  <input  class="form-control" type="file" #file placeholder="Choose Image" 
+                  (change)="uploadFile1($event)" 
+                  style="display:none;">
+  
+               
+                </div>
+                      </div> -->
+               
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <a class="btn btn-primary d-block" (click)="signupcompany()" >Sign up</a>
+                    </div>
+                    <div class="col-md-6 text-md-end mt-2 text-center">
+                      <a style="color: #e07900;" (click)="login()">Already have an account?</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================
+  Register -->
+<app-footer></app-footer>
+

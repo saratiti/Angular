@@ -1,0 +1,37 @@
+
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "small" color = "#fff" type = "square-jelly-box" [fullScreen] = "false">
+
+    <p style="color: white" > Loading... </p></ngx-spinner>
+
+    <app-navbar></app-navbar>
+<h1>about comp</h1>
+<input type="text" [(ngModel)]="name2" placeholder="please enter the name"/>
+<h1>{{ name2 }}</h1>
+<app-footer [nameof]="name"></app-footer>
+<input type="text"[formControl]="fname" id="fname" />
+<h1>{{ check1() }}</h1>
+<input type="text" [formControl]="lname" id="lname"/>
+<button type="submit" [disabled]="check()">Submit</button>
+<h1>{{ fname.value }}</h1>
+<h1>{{ lname.value }}</h1>
+<form [formGroup]="useregister" (ngSubmit)="formgroupuserreg()">
+<input formControlName="firstname"  placeholder="please enter the firstname"/> 
+<input formControlName="lastname" />   
+<button >Submit</button>
+</form>
+<button type="submit" (click)="reset1()">Reset</button>
+<button (click)="check()">Submit</button>
+
+
+<div class="container">
+<mat-form-field>
+
+<input type="email" matInput [formControl]="username" placeholder="please enter the username" />
+
+</mat-form-field>
+
+
+</div>
+
+<button (click)="opentoaster()">OpenToaster</button>
+

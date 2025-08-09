@@ -1,0 +1,93 @@
+<app-admin-navbar></app-admin-navbar>
+  
+  <!--=================================
+  Dashboard Nav -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sticky-top secondary-menu-sticky-top">
+            <div class="secondary-menu">
+              <ul>
+                <!-- <li><a href="dashboard-employer.html">Dashboard</a></li> -->
+                <li><a (click)="profile()">My Profile</a></li> 
+                <li><a  (click)="company()">Company Details</a></li>
+                <li><a  (click)="job()">Job Vacancy</a></li>
+                <li><a   (click)="applyjob()">Job Applied</a></li>
+                <li><a  (click)="User()">User Details</a></li>
+                <li><a (click)="Report()">Reports</a></li>
+                <li><a class="active"(click)="message()">Message</a></li>
+                <li><a  (click)="Manage()">Manage Site</a></li>
+                <li><a (click)="login()">Log Out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================
+  Dashboard Nav -->
+  
+
+  
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="user-dashboard-info-box table-responsive pb-4 mb-0">
+          <table class="table manage-candidates-top mb-0">
+            <thead>
+              <tr>
+                <th>Message Information</th>
+               <th>Action</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let mess of mess.contactdata" class="candidates-list">
+                <td  class="title">
+                 
+                  <div class="candidate-list-details">
+                    <div class="candidate-list-info">
+                      <div class="candidate-list-title">
+                          <!-- User Name -->
+                        <h5 class="mb-0"><a href="#">{{mess.userName}}</a></h5>
+                      </div>
+                      <div class="candidate-list-option">
+                        <ul class="list-unstyled">
+                          <!-- Email-->
+                          <li><i class="fas fa-envelope pe-1"></i>{{mess.email}}</li>
+                          <!--phone-->
+                          <li><i class="fas fa-phone pe-1"></i>{{mess.phone}}</li>
+                        </ul>
+                      </div>
+                      <div class="candidate-list-option">
+                        <ul class="list-unstyled">
+                          <!-- Message -->
+                          <li style="font-weight: bold;"><i class=" fa fa-comments pe-1"></i>{{mess.message}}</li>
+                        
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <ul class="list-unstyled mb-0 d-flex">
+
+                    <li><a (click)="deletemessage(mess.id)" class="text-danger" data-bs-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></a></li>
+                  </ul>
+                </td>
+              
+              </tr>
+            </tbody>
+          </table>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

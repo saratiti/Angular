@@ -1,0 +1,108 @@
+<app-user-navbar></app-user-navbar>
+  
+  <!--=================================
+  Dashboard Nav -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sticky-top secondary-menu-sticky-top">
+            <div class="secondary-menu">
+              <ul class="list-unstyled mb-0">
+                <li><a  (click)="profile()">My Profile</a></li> 
+                <!-- <li><a (click)="password()">Change Password</a></li> -->
+                <li><a (click)="education()">Education</a></li>
+                <li><a class="active" (click)="message()">Message</a></li>
+                <li><a  (click)="job()">Job Vacancy</a></li>
+                <li><a  (click)="applyjob()">Job Applied</a></li>
+                <li><a (click)="testimonial()">Testimonial</a></li>
+                <li><a (click)="logout()">Log Out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================
+  Dashboard Nav -->
+
+  
+
+<!--=================================
+Manage Candidates -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="user-dashboard-info-box table-responsive pb-4 mb-0">
+          <table class="table manage-candidates-top mb-0">
+            <thead>
+              <tr>
+                <th>Message Information</th>
+                <th class="text-center">Status</th>
+                <th class="text-center">RESPONSE Date</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let m of mess.message" class="candidates-list">
+                <td  class="title">
+                  <div class="thumb">
+                      <!-- company logo  -->
+                    <img class="img-fluid" src="../../../assets/images/{{m.logoImage}}" alt="">
+                  </div>
+                  <div class="candidate-list-details">
+                    <div class="candidate-list-info">
+                      <div class="candidate-list-title">
+                          <!-- Company Name -->
+                        <h5 class="mb-0"><a href="#">{{m.fullname}}</a></h5>
+                      </div>
+                      <div class="candidate-list-option">
+                        <ul class="list-unstyled">
+                          <!-- job title -->
+                          <li><i class="fas fa-filter pe-1"></i>{{m.joptitle}}</li>
+                          <!--address-->
+                          <!-- <li><i class="fas fa-map-marker-alt pe-1"></i>Canyon Village, Ramon</li> -->
+                        </ul>
+                      </div>
+                      <div class="candidate-list-option">
+                        <ul class="list-unstyled">
+                          <!-- Message -->
+                          <li><i class="fas fa-envelope pe-1"></i>{{m.message}}</li>
+                        
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="candidate-list-favourite-time text-center">
+                  <a class="candidate-list-favourite order-2 text-danger" href="#">
+                    <!-- <i   class="fas fa-times-circle "></i> -->
+                      <span class="candidate-list-time order-1">{{m.stutus}}</span>
+                      <!-- <i  style="color:#89ba16 ;" class="fas fa-check-circle"><span class="candidate-list-time order-1"> Accepted</span></i> -->
+                    
+                    </a>
+                   <!-- emplpoyee or not -->
+                  
+                </td>
+                <td class="candidate-list-favourite-time text-center">
+                  <a class="candidate-list-favourite order-2 text-danger" href="#">
+                    <!-- apply DATE -->
+                      <i class="fas fa-calendar-alt pe-1"></i>{{m.responsedate |date:'mediumDate' }}
+                  </a>
+               
+                  
+                </td>
+              
+              </tr>
+            </tbody>
+          </table>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--=================================
+Manage Candidates -->

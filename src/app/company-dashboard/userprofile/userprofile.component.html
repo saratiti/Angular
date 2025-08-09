@@ -1,0 +1,215 @@
+<!--=================================
+banner -->
+<div class="candidate-banner bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="candidate-list bg-light">
+            <div  *ngFor="let item of userservice.databyId" class="candidate-list-image">
+                <!-- user image  -->
+              <img class="img-fluid" src="../../../assets/images/{{item.imagename}}" alt="" >
+            </div>
+            <div class="candidate-list-details">
+              <div class="candidate-list-info">
+                <div class="candidate-list-title">
+                    <!-- user Name -->
+                  <h5  *ngFor="let item of userservice.databyId" class="mb-0"> {{item.fname}} {{item.lname}}</h5>
+                </div>
+                <div  class="candidate-list-option">
+                  <ul class="list-unstyled">
+                      <!-- Major -->
+                    <li  *ngFor="let item of userservice.dataedubyid"><i  class="fas fa-filter pe-1"></i>{{item.major}}</li>
+                      <!-- user address -->
+                    <li *ngFor="let item of userservice.databyId"><i class="fas fa-map-marker-alt pe-1"></i>{{item.address}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="widget ms-auto mb-0">
+              <div class="company-detail-meta ms-auto">
+                <a *ngFor="let item of userservice.dataedubyid" class="btn btn-primary" href="../../../assets/doc/{{item.uploadcv}}"  download="{{item.uploadcv}}">Download CV <i class="fas fa-download ms-1"></i></a>
+
+
+
+                <!-- <ul class="list-unstyled mt-3 mb-0 ms-2 ms-sm-0">
+                  <li>
+                    <div class="share-box share-dark-bg">
+                      <a href="#"> <i class="fas fa-share-alt"></i><span class="ps-2">Share</span></a>
+                      <ul class="list-unstyled share-box-social">
+                        <li> <a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li> <a href="#"><i class="fab fa-twitter"></i></a> </li>
+                        <li> <a href="#"><i class="fab fa-linkedin"></i></a> </li>
+                        <li> <a href="#"><i class="fab fa-instagram"></i></a> </li>
+                        <li> <a href="#"><i class="fab fa-pinterest"></i></a> </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fas fa-print"></i><span class="ps-2">Print</span></a>
+                  </li>
+                </ul> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=================================
+  banner -->
+  
+  <section class="space-pb">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sticky-top secondary-menu-sticky-top">
+            <div class="secondary-menu">
+              <ul>
+                <li><a href="#about"> About </a></li>
+                <li><a href="#education"> Education </a></li>
+               
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mb-4 mb-lg-0">
+          <div class="jobber-candidate-detail">
+            <div id="about">
+              <h5 class="mb-3">About Me</h5>
+              <div *ngFor="let item of userservice.databyId" class="border p-3">
+                <div class="row">
+                  <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="d-flex">
+                      <i class="font-xll text-primary align-self-center flaticon-account"></i>
+                      <div class="feature-info-content ps-3">
+                        <label class="mb-0">Name:</label>
+                        <!-- full Name client -->
+                        <span class="d-block fw-bold text-dark">{{item.fname}} {{item.lname}}</span>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="d-flex">
+                      <i class="font-xll text-primary align-self-center flaticon-contact"></i>
+                      <div class="feature-info-content ps-3">
+                        <label class="mb-0">Phone :</label>
+                        <!-- phone client -->
+                        <span class="d-block fw-bold text-dark">{{item.phone}}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="d-flex">
+                      <i class="font-xll text-primary align-self-center flaticon-appointment"></i>
+                      <div class="feature-info-content ps-3">
+                        <label class="mb-0">Date Of Birth :</label>
+                        <!-- birthDay client -->
+                        <span class="d-block fw-bold text-dark">{{item.birthOfDate |date:'mediumDate'}}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="d-flex">
+                      <i class="font-xll text-primary align-self-center flaticon-map"></i>
+                      <div class="feature-info-content ps-3">
+                        <label class="mb-0">Address :</label>
+                        <span class="d-block fw-bold text-dark">{{item.address}}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="d-flex">
+                      <i class="font-xll text-primary align-self-center flaticon-man"></i>
+                      <div class="feature-info-content ps-3">
+                        <label class="mb-0">Sex :</label>
+                        <span class="d-block fw-bold text-dark">{{item.gender}}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="d-flex">
+                      <i class="font-xll text-primary align-self-center flaticon-approval"></i>
+                      <div class="feature-info-content ps-3">
+                        <label class="mb-0">Email:</label>
+                        <span class="d-block fw-bold text-dark">{{item.email}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+            <hr class="my-4 my-md-5">
+            <div *ngFor="let item of userservice.dataedubyid" id="education">
+              <h5 class="mb-3">Education</h5>
+              <div class="jobber-candidate-timeline">
+                <div class="jobber-timeline-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="jobber-timeline-item">
+                  <div class="jobber-timeline-cricle">
+                    <i class="far fa-circle"></i>
+                  </div>
+                  <div class="jobber-timeline-info">
+                    <span class="jobber-timeline-time">2018 - Pres</span>
+                    <!-- Major -->
+                    <h6 class="mb-2">{{item.major}}</h6>
+                    <!-- university -->
+                    <span>- {{item.university}}</span>
+                    <br><span>- <!--Degree  --> {{item.degree}}</span> (Degree)
+                    <br> <span>- <!--GPA  --> {{item.gpa}} </span>(GPA)
+                    <!-- <p class="mt-2">This is the beginning of creating the life that you want to live. Know what the future holds for you as a result of the choice you can make today.</p> -->
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+         
+        </div>
+      </div>
+      <!--=================================
+      sidebar -->
+      <div class="col-lg-4">
+        <div class="sidebar mb-0">
+       
+      
+          <div class="widget">
+            <div class="widget-title">
+                    <!-- client name -->
+              <h5 *ngFor="let item of userservice.databyId">Contact {{item.fname}} {{item.lname}}</h5>
+            </div>
+            <div class="company-contact-inner widget-box">
+              <form [formGroup]="Message">
+              
+              
+              
+                <div class="form-group mb-3">
+                  <label class="form-label">Message</label>
+                  <textarea formControlName="message" class="form-control" rows="3" placeholder=""></textarea>
+                </div>
+                   <div class="form-group mb-3">
+                  <label class="form-label">Stutus</label>
+                  <select formControlName="stutus"  class="form-control basic-select">
+                    <option  value="reject" style="color:red ;" selected="selected">reject</option>
+                    <option value="Accept" style="color: #89ba16;">Accept</option>
+                  </select>
+                  <!-- <input type="email" class="form-control" placeholder=""> -->
+                </div> 
+                <a class="btn btn-primary btn-outline-primary d-grid" (click)="sendMessage()">Send Message</a>
+              </form>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <!--=================================
+      sidebar -->
+  
+    </div>
+  </div>
+  </section>
+  
+  

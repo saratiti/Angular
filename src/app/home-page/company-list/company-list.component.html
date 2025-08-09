@@ -1,0 +1,101 @@
+<app-nav-bar></app-nav-bar>
+<!--=================================
+banner -->
+<section class="header-inner header-inner-big bg-holder text-white" style="background-image: url(../../../assets/ass1/images/bg/banner-01.jpg);">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="job-search-field">
+            <div class="job-search-item">
+              <form class="form row">
+                <div class="offset-3 col-lg-5">
+                  <div class="form-group left-icon mb-md-0 mb-3">
+                    <input [value]="search"  (keyup)="searchcompany($event)" type="text" class="form-control" name="job_title" placeholder="Company Name">
+                  <i class="fas fa-search"></i> </div>
+                </div>
+                <!-- <div class="col-lg-4 col-md-4">
+                  <div class="form-group left-icon mb-md-0 mb-3">
+                    <input type="text" class="form-control" name="job_title" placeholder="Where?">
+                  <i class="fas fa-search"></i> </div>
+                </div> -->
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                  <div class="form-group form-action mb-0">
+                    <button (click)="getcompanyName()" type="submit" class="btn btn-primary mt-0"><i class="fas fa-search-location"></i> Find Employer</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================
+  banner -->
+
+  
+<section class="space-ptb">
+    <div class="container">
+      <div class="row">
+      
+        <div class="col-lg-9">
+          <div class="row mb-4">
+            <!-- number of company -->
+             <div class="col-12">
+              
+              <h6 class="mb-0  btn btn-sm btn-dark"> <span class="text-primary">{{count}} Employer</span></h6>
+            </div> 
+          </div>
+       
+          <div *ngFor="let com of company.data; let i =index" class="employers-list">
+            <div class="employers-list-logo">
+              <!-- company logo  -->
+              <img class="img-fluid" src="../../../assets/images/{{com.logoImage}}" alt="">
+            </div>
+            <div class="employers-list-details">
+              <div class="employers-list-info">
+                <div class="employers-list-title">
+                  <!-- full Name company -->
+                  <h5 class="mb-0"><a href="employer-detail.html"> {{com.fullname}}</a></h5>
+                </div>
+                <div class="employers-list-option">
+                  <ul class="list-unstyled">
+                    <!-- job title from job vac -->
+                    <li><i class="fas fa-globe"></i> {{com.companyUrl}}</li>
+                    <!-- Address company -->
+                    <li><i class="fas fa-map-marker-alt pe-1"></i> {{com.address}}</li>
+                  </ul>
+                  <ul class="list-unstyled">
+                   <!-- phone -->
+                   <li><i class="fas fa-phone pe-1"></i>{{com.phone}}</li>
+                   <!-- Email -->
+                   <li><a ><i class="fas fa-envelope pe-1"></i>{{com.email}}</a></li></ul>
+                </div>
+              </div>
+            </div>
+            <div class="employers-list-position">
+              <!-- number of job in this company and go to job page -->
+              <a class="btn btn-sm btn-dark" (click)="gotojob(com.company_ID)">{{countofjob[i]}} Open position</a>
+            </div>
+          </div>
+         
+<!--         
+          <div class="row">
+            <div class="col-12 text-center mt-4 mt-sm-5">
+              <ul class="pagination justify-content-center mb-0">
+                <li class="page-item disabled"> <span class="page-link b-radius-none">Prev</span> </li>
+                <li class="page-item active" aria-current="page"><span class="page-link">1 </span> <span class="sr-only">(current)</span></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">25</a></li>
+                <li class="page-item"> <a class="page-link" href="#">Next</a> </li>
+              </ul>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<app-footer></app-footer>

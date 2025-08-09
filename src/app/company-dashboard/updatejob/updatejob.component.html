@@ -1,0 +1,109 @@
+<app-company-navbar></app-company-navbar>
+<!-- {
+        
+  "joptitle": "QA",
+  "salary": "2200",
+  "jobdescription": "QA",
+  "opening": "8:00 AM",
+  "joblocation": "Amman",
+  "applaydate": "2022-02-25T22:13:39",
+  "lastdate": "2022-03-08T22:13:57",
+  "postingdate": "2022-02-25T22:15:01",
+  "company_ID": 1
+
+} -->
+<!--=================================
+Dashboard Nav -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sticky-top secondary-menu-sticky-top">
+          <div class="secondary-menu">
+            <ul>
+            
+              <li><a  (click)="profile()">My Profile</a></li>
+              
+              <li><a (click)="manage()">Manage Candidates</a></li>
+              <li><a class="active"(click)="managejob()">Manage Jobs</a></li>
+              <li><a (click)="postjob()">Post New Job</a></li>
+              <li><a (click)="appliedjob()">Applied job</a></li>
+              <li><a (click)="report()">Reports</a></li>
+              <li><a (click)="login()">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--=================================
+Dashboard Nav -->
+<!--=================================
+Update Job -->
+<section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="user-dashboard-info-box">
+            <div class="section-title-02 mb-4 d-inline-block">
+              <h4>Update job </h4>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <form class="row" [formGroup]="updateJob">
+                  <div class="form-group mt-0 mb-3 col-md-12">
+                    <label class="form-label">Job Title</label>
+                    <input formControlName="joptitle" type="text" class="form-control" >
+                  </div>
+                  <div class="form-group mt-0 mb-3 col-md-12">
+                    <label class="form-label">Job Description</label>
+                    <textarea formControlName="jobdescription" class="form-control" rows="4"></textarea>
+                  </div>
+                  <div class="form-group mt-0 mb-3 col-md-6 datetimepickers">
+                  <label class="form-label">Job Expire Date</label>
+                  <div class="input-group date" id="datetimepicker-01" data-target-input="nearest">
+                    <input formControlName="lastdate" type="datetime-local" class="form-control datetimepicker-input" placeholder="Date" data-target="#datetimepicker-01">
+                    <!-- <div class="input-group-append d-flex" data-target="#datetimepicker-01" data-toggle="datetimepicker">
+                      <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="form-group mt-0 mb-3 col-md-6 datetimepickers">
+                  <label class="form-label"> Applay Job Date</label>
+                  <div class="input-group date" id="datetimepicker-01" data-target-input="nearest">
+                    <input formControlName="applaydate" type="datetime-local" class="form-control datetimepicker-input"  data-target="#datetimepicker-01">
+                   
+                  </div>
+                </div>
+                
+          
+                
+                  <div class="form-group mt-0 mb-3 col-md-6 select-border">
+                    <label class="form-label">Opening</label>
+                    <input formControlName="opening" type="time" class="form-control" value="">
+            
+                  </div>
+                 
+                
+                  <div class="form-group mt-0 col-md-6 mb-3 mb-md-0">
+                    <label class="form-label">Salary </label>
+                    <input formControlName="salary" type="text" class="form-control" value="">
+                  </div>
+                  <div class="form-group mt-0 col-md-6 mb-3 mb-md-0">
+                    <label class="form-label">Job Location</label>
+                    <input formControlName="joblocation" type="text" class="form-control" value="">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+         
+        
+          <a class="btn btn-lg btn-primary" (click)="update()">Save</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================
+  Post New Job -->

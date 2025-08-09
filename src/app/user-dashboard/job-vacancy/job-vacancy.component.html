@@ -1,0 +1,142 @@
+<app-user-navbar></app-user-navbar>
+  
+
+  
+  <!--=================================
+  Dashboard Nav -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sticky-top secondary-menu-sticky-top">
+            <div class="secondary-menu">
+              <ul class="list-unstyled mb-0">
+                <li><a  (click)="profile()">My Profile</a></li> 
+                <!-- <li><a (click)="password()">Change Password</a></li> -->
+                <li><a (click)="education()">Education</a></li>
+                <li><a (click)="message()">Message</a></li>
+
+                <li><a  class="active"(click)="job()">Job Vacancy</a></li>
+                <li><a  (click)="applyjob()">Job Applied</a></li>
+                <li><a  (click)="testimonial()">Testimonial</a></li>
+                <li><a (click)="logout()">Log Out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================
+  Dashboard Nav -->
+<!--=================================
+  Employer Dashboard -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        
+          <div class="user-dashboard-info-box mb-0">
+            <div class="section-title-02 mb-4">
+              <h4>Jobs Vacancy</h4>
+            </div>
+
+            <div style="background-color:#f6f6f6 " class="job-search-field">
+              <div class="job-search-item">
+                <form class="form row">
+                  <!-- <div class="col-lg-5">
+                    <div class="form-group mb-3">
+                      <div class="d-flex">
+                        <label class="form-label">What</label>
+                        <span class="ms-auto">e.g.  Tahaluf</span>
+                      </div>
+                      <div class="position-relative left-icon">
+                        <input type="text" class="form-control" name="job_title" placeholder=" company">
+                        <i class="fas fa-search"></i>
+                      </div>
+                    </div>
+                  </div> -->
+                  <div class="offset-3 col-lg-5">
+                    <div class="form-group mb-3">
+                      <div class="d-flex">
+                        <label class="form-label">What</label>
+                        <span class="ms-auto">e.g. Front End</span>
+                      </div>
+                      <div class="position-relative left-icon">
+                        <input  type="text"  [value]="search" class="form-control location-input" (keyup)="searchjob($event)" name="job_title" placeholder="job title">
+                   
+                        <i  class="fas fa-search"></i>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-lg-2 col-sm-12">
+                    <div class="form-group mb-3 form-action">
+                      <button (click)="getjobtitle()" type="submit" class="btn btn-primary btn-lg"><i class="fas fa-search"></i> Find Jobs</button>
+                    </div>
+                  </div>
+                  
+                </form>
+              </div>
+            </div>
+            
+         
+            <div class="row">
+              <div *ngFor="let job of jobservice.data"  class="col-12">
+                <div class="job-list ">
+                  <div class="job-list-logo">
+                    <!-- Image company Logo -->
+                    <img  class="img-fluid" src="../../../assets/images/{{job.logoImage}}" alt="">
+                  </div>
+                  <div class="job-list-details">
+                    <div class="job-list-info">
+                      <div class="job-list-title">
+                        <!-- JopTitle -->
+                        <h5 class="mb-0"><a href="job-detail.html">{{job.joptitle}}</a></h5>
+                      </div>
+                      <div class="job-list-option">
+                        <ul class="list-unstyled">
+                          <!-- companyURl or company name -->
+                            <li > <!-- companyURl --> <a href="employer-detail.html"> {{job.fullname}} <!--company name --></a> </li>
+                          <!-- Location  -->
+                          <li><i class="fas fa-map-marker-alt pe-1"></i>{{job.joblocation}}</li>
+                          <li>  <i  class="far fa-clock"></i> {{job.opening}} <!-- Opening--></li>
+                        </ul>
+                      </div>
+                       <div class="job-list-option">
+                        <ul class="list-unstyled">
+            
+                          <li>  <i  class="fas fa-calendar-alt"></i> <!-- date start --> {{job.applaydate |date:'mediumDate'}} -  <!-- date End --> {{job.lastdate | date:'mediumDate'}}</li>
+
+                            <li>  $   <!-- Salary --> {{job.salary}} </li>
+                          
+                         
+                        </ul>
+                      </div>
+                      <div>
+                        <p> JobDescription: {{job.jobdescription}}
+                          <!-- JobDescription  -->
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="job-list-favourite-time"> 
+                    <div style="padding-left: 200px; " class="job-list"> 
+                      <button (click)="apply(job.jobVacancy_ID)"  style="width: 300px;" class="btn btn-primary "><i class="far fa-paper-plane"></i>Apply for Job</button>
+
+                      </div>
+                      
+                      </div>
+                </div>
+              </div>
+           
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================
+  Employer Dashboard -->
+  

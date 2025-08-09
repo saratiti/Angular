@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Tahaluf.Career",
+    "\\Tahaluf.Career\\Tahaluf.Career.API",
+    "\\Tahaluf.Career\\Tahaluf.Career.API\\Controllers",
+    "\\Tahaluf.Career\\Tahaluf.Career.core",
+    "\\Tahaluf.Career\\Tahaluf.Career.core\\Repository",
+    "\\Tahaluf.Career\\Tahaluf.Career.core\\Service"
+  ],
+  "SelectedNode": "\\Tahaluf.Career\\Tahaluf.Career.core\\Repository\\IJWTRepository.cs",
+  "PreviewInSolutionExplorer": false
+}

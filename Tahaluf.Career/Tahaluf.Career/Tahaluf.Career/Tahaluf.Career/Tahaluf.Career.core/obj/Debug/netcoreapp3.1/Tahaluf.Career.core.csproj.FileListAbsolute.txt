@@ -1,0 +1,30 @@
+C:\Users\Administrator\Downloads\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\bin\Debug\netcoreapp3.1\Tahaluf.Career.core.deps.json
+C:\Users\Administrator\Downloads\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\bin\Debug\netcoreapp3.1\Tahaluf.Career.core.dll
+C:\Users\Administrator\Downloads\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\bin\Debug\netcoreapp3.1\Tahaluf.Career.core.pdb
+C:\Users\Administrator\Downloads\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Downloads\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.dll
+C:\Users\Administrator\Downloads\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.pdb
+C:\Users\Administrator\Downloads\Tahaluf.Career (1)\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\bin\Debug\netcoreapp3.1\Tahaluf.Career.core.deps.json
+C:\Users\Administrator\Downloads\Tahaluf.Career (1)\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\bin\Debug\netcoreapp3.1\Tahaluf.Career.core.dll
+C:\Users\Administrator\Downloads\Tahaluf.Career (1)\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\bin\Debug\netcoreapp3.1\Tahaluf.Career.core.pdb
+C:\Users\Administrator\Downloads\Tahaluf.Career (1)\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\Tahaluf.Career (1)\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Downloads\Tahaluf.Career (1)\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\Tahaluf.Career (1)\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\Tahaluf.Career (1)\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\Tahaluf.Career (1)\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.dll
+C:\Users\Administrator\Downloads\Tahaluf.Career (1)\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.pdb
+C:\Users\Administrator\Desktop\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\bin\Debug\netcoreapp3.1\Tahaluf.Career.core.deps.json
+C:\Users\Administrator\Desktop\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\bin\Debug\netcoreapp3.1\Tahaluf.Career.core.dll
+C:\Users\Administrator\Desktop\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\bin\Debug\netcoreapp3.1\Tahaluf.Career.core.pdb
+C:\Users\Administrator\Desktop\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.dll
+C:\Users\Administrator\Desktop\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career\Tahaluf.Career.core\obj\Debug\netcoreapp3.1\Tahaluf.Career.core.pdb

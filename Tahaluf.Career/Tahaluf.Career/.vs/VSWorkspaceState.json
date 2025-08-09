@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Tahaluf.Career",
+    "\\Tahaluf.Career\\Tahaluf.Career",
+    "\\Tahaluf.Career\\Tahaluf.Career\\Tahaluf.Career.API",
+    "\\Tahaluf.Career\\Tahaluf.Career\\Tahaluf.Career.API\\bin",
+    "\\Tahaluf.Career\\Tahaluf.Career\\Tahaluf.Career.core",
+    "\\Tahaluf.Career\\Tahaluf.Career\\Tahaluf.Career.infra",
+    "\\Tahaluf.Career\\Tahaluf.Career\\Tahaluf.Career.infra\\Common"
+  ],
+  "SelectedNode": "\\Tahaluf.Career\\Tahaluf.Career\\Tahaluf.Career.API\\Startup.cs",
+  "PreviewInSolutionExplorer": false
+}
